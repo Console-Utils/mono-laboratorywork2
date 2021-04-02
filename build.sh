@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-mcs -out:main.exe *.cs
+mcs -out:main.exe -- *.cs
