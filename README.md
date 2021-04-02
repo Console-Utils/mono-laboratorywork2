@@ -6,4 +6,4 @@ This repository is the backup of the corresponding REPL. It contains laboratory 
 
 ## Notes
 
-Several linters such as markdownlint and shellcheck are used in CI.
+Several linters such as markdownlint, shellcheck and gendarme are used in CI.
