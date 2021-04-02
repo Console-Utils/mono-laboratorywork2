@@ -10,18 +10,22 @@ namespace LaboratoryWork
     {
       const double Precision = 1E-7;
 
-      double result = input;
-      double last = input;
-      int exponent = 3;
-      bool isNegative = true;
+      double result = 0;
+      double last = 0;
+      double poweredInput = input;
+      int exponent = 1;
+      int sign = 1;
+      long factorial = 1;
 
-      while (Math.Abs(last) >= Precision)
+      do
       {
-        last = (1 - Convert.ToInt32(isNegative)*2)*Math.Pow(input, exponent)/Enumerable.Range(1, exponent).Aggregate((first, second) => first*second);
-        result += last;
+        last = poweredInput/factorial;
+        result += sign*last;
+        sign = -sign;
         exponent += 2;
-        isNegative = !isNegative;
-      }
+        factorial *= (exponent - 1)*exponent;
+        poweredInput *= Math.Pow(input, 2);
+      } while (Math.Abs(last) >= Precision);
 
       return result;
     }
