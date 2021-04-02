@@ -28,6 +28,7 @@ jobs:
       - name: Markdown Check
         run: |
           sudo chown -R $(whoami) /usr/local/bin /usr/local/lib /usr/local/include /usr/local/share
+          npm install -g markdownlint-cli
           markdownlint *.md
 
       - name: Shell Check
