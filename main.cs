@@ -1,5 +1,6 @@
 using System;
 using System.Linq;
+using System.Globalization;
 using LaboratoryWork.Utils;
 
 namespace LaboratoryWork
@@ -23,7 +24,7 @@ namespace LaboratoryWork
         result += sign*last;
         sign = -sign;
         exponent += 2;
-        factorial *= (exponent - 1)*exponent;
+        factorial *= (long)(exponent - 1)*exponent;
         poweredInput *= Math.Pow(input, 2);
       } while (Math.Abs(last) >= Precision);
 
@@ -33,7 +34,7 @@ namespace LaboratoryWork
     private static void Main()
     {
       var x = Base.ReadDouble("Please enter x variable value: ");
-      Console.WriteLine($"{nameof(Math.Sin)} == {Math.Sin(x)} | {nameof(CustomSin)} == {CustomSin(x)}");
+      Console.WriteLine(string.Format(CultureInfo.CurrentCulture, "{0} == {1} | {2} == {3}", nameof(Math.Sin), Math.Sin(x), nameof(CustomSin), CustomSin(x)));
     }
   }
 }
