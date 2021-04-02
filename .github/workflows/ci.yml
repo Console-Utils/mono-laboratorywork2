@@ -18,3 +18,19 @@ jobs:
       - name: Mono Build
         run: |
           chmod +x build.sh && ./build.sh
+  
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Markdown Check
+        run: |
+          sudo chown -R $(whoami) /usr/local/bin /usr/local/lib /usr/local/include /usr/local/share
+          markdownlint *.md
+
+      - name: Shell Check
+        run: |
+          sudo apt-get install shellcheck
+          shellcheck *.sh
