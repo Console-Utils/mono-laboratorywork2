@@ -32,6 +32,7 @@ jobs:
           markdownlint *.md
 
       - name: Shell Check
+        if: always()
         run: |
           sudo apt-get install shellcheck
           shellcheck *.sh
