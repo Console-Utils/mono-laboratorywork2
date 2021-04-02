@@ -7,7 +7,9 @@ namespace LaboratoryWork.Utils
     public static double ReadDouble(string prompt = "")
     {
       Console.Write(prompt);
-      return double.Parse(Console.ReadLine());
+      double result = default(double);
+      double.TryParse(Console.ReadLine(), out result);
+      return result;
     }
   }
 }

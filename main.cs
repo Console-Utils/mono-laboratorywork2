@@ -4,7 +4,7 @@ using LaboratoryWork.Utils;
 
 namespace LaboratoryWork
 {
-  internal class MainClass
+  internal static class MainClass
   {
     private static double CustomSin(double input)
     {
@@ -30,7 +30,7 @@ namespace LaboratoryWork
       return result;
     }
 
-    private static void Main(string[] args)
+    private static void Main()
     {
       var x = Base.ReadDouble("Please enter x variable value: ");
       Console.WriteLine($"{nameof(Math.Sin)} == {Math.Sin(x)} | {nameof(CustomSin)} == {CustomSin(x)}");
