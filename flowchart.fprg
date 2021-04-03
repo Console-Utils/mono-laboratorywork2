@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value="Laboratory-Work-2"/>
+        <attribute name="authors" value="Alvin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-04-03 06:49:34 PM"/>
+        <attribute name="created" value="QWx2aW47REVTS1RPUC03RENLVUJPOzIwMjEtMDQtMDM7MDU6Mjc6MzIgUE07Mjg1OQ=="/>
+        <attribute name="edited" value="QWx2aW47REVTS1RPUC03RENLVUJPOzIwMjEtMDQtMDM7MDY6NDk6MzQgUE07MTA7MzAyMg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="x" type="Real" array="False" size=""/>
+            <input variable="x"/>
+            <output expression="&quot;Sin == &quot; &amp; Sin(x) &amp; &quot; | CustomSin == &quot; &amp; CustomSin(x)" newline="True"/>
+        </body>
+    </function>
+    <function name="CustomSin" type="Real" variable="result">
+        <parameters>
+            <parameter name="input" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="Precision" type="Real" array="False" size=""/>
+            <assign variable="Precision" expression="0.0000001"/>
+            <declare name="result" type="Real" array="False" size=""/>
+            <assign variable="result" expression="0"/>
+            <declare name="last" type="Real" array="False" size=""/>
+            <assign variable="last" expression="0"/>
+            <declare name="poweredInput" type="Real" array="False" size=""/>
+            <assign variable="poweredInput" expression="input"/>
+            <declare name="exponent" type="Integer" array="False" size=""/>
+            <assign variable="exponent" expression="1"/>
+            <declare name="sign" type="Integer" array="False" size=""/>
+            <assign variable="sign" expression="1"/>
+            <declare name="factorial" type="Integer" array="False" size=""/>
+            <assign variable="factorial" expression="1"/>
+            <comment text="Note: this variable in C# program is typed as long."/>
+            <do expression="Abs(last) &gt;= Precision">
+                <assign variable="last" expression="poweredInput/factorial"/>
+                <assign variable="result" expression="result + sign*last"/>
+                <assign variable="sign" expression="-sign"/>
+                <assign variable="exponent" expression="exponent + 2"/>
+                <assign variable="factorial" expression="factorial*(exponent - 1)*exponent"/>
+                <assign variable="poweredInput" expression="poweredInput*input^2"/>
+            </do>
+        </body>
+    </function>
+</flowgorithm>
