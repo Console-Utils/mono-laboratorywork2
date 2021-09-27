@@ -1,9 +1,7 @@
-# Laboratory Work 2
+# Laboratory work 2
+
+## Description
 
 [![CI](https://github.com/alvinseville7cf/CSharp---Exercise---Other---Laboratory-Work-2/actions/workflows/ci.yml/badge.svg)](https://github.com/alvinseville7cf/CSharp---Exercise---Other---Laboratory-Work-2/actions/workflows/ci.yml)
 
-This repository is the backup of the corresponding REPL. It contains laboratory work 2 code.
-
-## Notes
-
-Several linters such as markdownlint, shellcheck and gendarme are used in CI. You have to install [Flowgorithm](http://www.flowgorithm.org/index.htm) to open flowchart (with fprg extension) if there is one or use draw.io (when file has drawio extension).
+This repository contains laboratory work made for another person.
